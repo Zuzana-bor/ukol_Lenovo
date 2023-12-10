@@ -33,11 +33,13 @@ const Description: FC<DescriptionProps> = ({ handleMoreExpandClick }) => {
       <CardHeader title="Lenovo ThinkVision M14d - LED monitor 14 " />
 
       <CardContent>
+        <Typography variant="body1" color="text.primary">
+          Náš kód: 373027
+        </Typography>
         <Typography variant="h6" color="green">
           Skladem 5 kusů
         </Typography>
         <br />
-
         <Typography
           variant="body2"
           color="text.sekundary"
@@ -60,7 +62,7 @@ const Description: FC<DescriptionProps> = ({ handleMoreExpandClick }) => {
           </Button>
         </Typography>
       </CardContent>
-
+      <Typography variant="h3">5 990 Kč</Typography>
       <Button
         onClick={handleCLick}
         variant="outlined"
