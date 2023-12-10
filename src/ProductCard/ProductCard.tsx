@@ -29,7 +29,7 @@ const ProductCard = () => {
                 top: 200,
                 left: 200,
                 zIndex: 1,
-                width: 150,
+                width: 80,
               }}
               image="/assets/vanoce.jpg"
               title="vanoce"
