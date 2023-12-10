@@ -43,20 +43,7 @@ const Gallery = () => {
         {images.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <Box
-                component="img"
-                sx={{
-                  mx: 25,
-
-                  display: 'block',
-                  maxWixdth: 1200,
-                  overflow: 'hidden',
-
-                  objectFit: 'contain',
-                }}
-                src={step.imgPath}
-                alt={step.label}
-              />
+              <Box component="img" src={step.imgPath} alt={step.label} />
             ) : null}
           </div>
         ))}

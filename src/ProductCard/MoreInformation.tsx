@@ -4,25 +4,20 @@ import { images } from './data';
 
 const MoreInformation = () => {
   return (
-    <Grid container spacing={0.5}>
+    <Grid container columns={{ sm: 8, md: 12 }}>
       <Grid xs={12}>
         {images.map((item) => (
           <Card
             id={item.imgPath}
             sx={{
-              display: 'flex',
-
-              direction: 'column',
-              textAlign: 'center',
+              height: '25%',
             }}
           >
             <CardContent>
               <CardMedia
                 sx={{
-                  width: '20% ',
-                  justifyContent: 'center',
-                  textAlign: 'center',
-                  mx: 100,
+                  mx: 5,
+                  maxWidth: 350,
                 }}
                 component="img"
                 image={item.imgPath}
@@ -35,7 +30,7 @@ const MoreInformation = () => {
                 variant="body2"
                 color="text.secondary"
                 sx={{
-                  mx: 50,
+                  mx: 5,
                 }}
               >
                 {item.description}

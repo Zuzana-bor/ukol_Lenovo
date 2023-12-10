@@ -44,7 +44,7 @@ const Description: FC<DescriptionProps> = ({ handleMoreExpandClick }) => {
           variant="body2"
           color="text.sekundary"
           sx={{
-            mx: 15,
+            mx: 5,
           }}
         >
           LCD monitor má úhlopříčku 14", rozlišení 2240x 1400 px, kontrastní
