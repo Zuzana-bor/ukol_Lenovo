@@ -3,38 +3,15 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import { images } from './data';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
-const images = [
-  {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
-    imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Bird',
-    imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Bali, Indonesia',
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
-  },
-  {
-    label: 'Goč, Serbia',
-    imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-];
 
 const Gallery = () => {
   const theme = useTheme();
@@ -54,20 +31,9 @@ const Gallery = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
-      <Paper
-        square
-        elevation={0}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          height: 50,
-          pl: 2,
-          bgcolor: 'background.default',
-        }}
-      >
-        <Typography>{images[activeStep].label}</Typography>
-      </Paper>
+    <Box sx={{ height: '25%' }}>
+      <Typography>{images[activeStep].label}</Typography>
+
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -80,11 +46,13 @@ const Gallery = () => {
               <Box
                 component="img"
                 sx={{
-                  height: 255,
+                  mx: 25,
+
                   display: 'block',
-                  maxWidth: 400,
+                  maxWixdth: 1200,
                   overflow: 'hidden',
-                  width: '100%',
+
+                  objectFit: 'contain',
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -99,7 +67,7 @@ const Gallery = () => {
         activeStep={activeStep}
         nextButton={
           <Button
-            size="small"
+            size="large"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
           >
