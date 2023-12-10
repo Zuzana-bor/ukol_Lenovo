@@ -31,7 +31,7 @@ const Gallery = () => {
   };
 
   return (
-    <Box sx={{ height: '25%' }}>
+    <Box sx={{ height: '25%' }} >
       <Typography>{images[activeStep].label}</Typography>
 
       <AutoPlaySwipeableViews
@@ -43,7 +43,7 @@ const Gallery = () => {
         {images.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <Box
+              <Box 
                 component="img"
                 src={step.imgPath}
                 alt={step.label}

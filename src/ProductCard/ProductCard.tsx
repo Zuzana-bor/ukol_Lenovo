@@ -22,7 +22,7 @@ const ProductCard = () => {
     >
       {info === false ? (
         <Paper>
-          <Grid container columns={{ sm: 8, md: 12 }}>
+          <Grid container columns={{ sm: 8, md: 12 }} disableEqualOverflow>
             <CardMedia
               sx={{
                 position: 'absolute',
