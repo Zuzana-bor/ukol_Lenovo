@@ -10,6 +10,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { images } from './data';
+import { relative } from 'path';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -43,7 +44,17 @@ const Gallery = () => {
         {images.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <Box component="img" src={step.imgPath} alt={step.label} />
+              <Box
+                component="img"
+                src={step.imgPath}
+                alt={step.label}
+                sx={{
+                  position: 'relative',
+                  left: '25%',
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
             ) : null}
           </div>
         ))}

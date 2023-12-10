@@ -11,14 +11,12 @@ const MoreInformation = () => {
             id={item.imgPath}
             sx={{
               height: '25%',
+              display: 'flex',
             }}
           >
             <CardContent>
               <CardMedia
-                sx={{
-                  mx: 5,
-                  maxWidth: 350,
-                }}
+                sx={{ justifyContent: 'center', mx: 5, maxWidth: '25%' }}
                 component="img"
                 image={item.imgPath}
                 title={item.headline}
